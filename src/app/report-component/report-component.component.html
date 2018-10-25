@@ -1,5 +1,21 @@
-<mat-toolbar mat-button [matMenuTriggerFor]="appMenu"> {{report[0].invoiceId}} {{report[0].vendorName}}</mat-toolbar>
+<div class="container">
+<mat-toolbar-row
+style="background-color: rgb(83, 83, 85);
+       color: white; 
+       font-size: 14px; 
+       font-weight: bold; 
+       font-family: Arial, Helvetica, sans-serif;
+       radius: 20%" 
+>Invoice ID | Vendor Name</mat-toolbar-row>
+<mat-toolbar 
+style="background-color: rgb(129, 129, 133);
+       color: white; 
+       font-size: 25px; 
+       font-weight: bold; 
+       font-family: Arial, Helvetica, sans-serif " 
+
+mat-button [matMenuTriggerFor]="appMenu">  {{report[0].invoiceId}}  |  {{report[0].vendorName}}</mat-toolbar>
 <mat-menu #appMenu="matMenu">
   <button mat-menu-item *ngFor="let rep of report">{{rep.invoiceId}} | {{rep.createdBy}}</button>
 </mat-menu>
-
+</div>

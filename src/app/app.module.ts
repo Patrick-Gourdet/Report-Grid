@@ -5,7 +5,10 @@ import {AppRoutingModule} from './app.routing-module'
 import { AppComponent } from './app.component';
 import { ReportComponentComponent } from './report-component/report-component.component';
 import 'hammerjs';
-
+import {MatMenuModule} from '@angular/material/menu';
+import { MatIconModule} from '@angular/material/Icon';
+import { MatButtonModule} from '@angular/material/button';
+import { MatToolbarModule} from '@angular/material/toolbar';
 @NgModule({
    declarations: [
       AppComponent,
@@ -14,7 +17,11 @@ import 'hammerjs';
    imports: [
       BrowserModule,
       AppRoutingModule,
-      BrowserAnimationsModule
+      BrowserAnimationsModule,
+      MatMenuModule,
+      MatIconModule,
+      MatButtonModule,
+      MatToolbarModule
    ],
    providers: [],
    bootstrap: [

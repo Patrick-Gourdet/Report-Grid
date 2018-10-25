@@ -1,3 +1,5 @@
-<p>
-  report-component works!
-</p>
+<mat-toolbar mat-button [matMenuTriggerFor]="appMenu"> {{report[0].invoiceId}} {{report[0].vendorName}}</mat-toolbar>
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item *ngFor="let rep of report">{{rep.invoiceId}} | {{rep.createdBy}}</button>
+</mat-menu>
+
